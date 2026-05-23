@@ -23,7 +23,7 @@ memory {
 }
 
 disk "/" {
-        format = "󰋊 %avail / %total"
+        format = "󰋊 %used / %total"
         low_threshold = 10
         threshold_type = percentage_free
 }
