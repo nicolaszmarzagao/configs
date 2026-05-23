@@ -1,0 +1,17 @@
+configuration {
+    modi: "drun,run,window";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+
+    terminal: "gnome-terminal";
+
+    drun-display-format: "{icon} {name}";
+    display-drun: "󰀻 Apps";
+    display-run: " Run";
+    display-window: " Windows";
+
+    sidebar-mode: true;
+}
+
+@theme "~/.config/rofi/themes/tokyonight.rasi"
