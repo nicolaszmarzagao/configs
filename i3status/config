@@ -10,6 +10,8 @@ order += "cpu_usage"
 order += "memory"
 order += "disk /"
 order += "ethernet _first_"
+order += "wireless _first_"
+order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
@@ -33,6 +35,26 @@ ethernet _first_ {
         format_down = "󰈂"
 }
 
+wireless _first_ {
+    format_up = "󰖩."
+    format_down = "󰖪."
+}
+
+battery 0 {
+    format = "%status %percentage"
+    format_down = "No battery"
+    path = "/sys/class/power_supply/BAT0/uevent"
+    status_chr = "🔌"
+    status_bat = "🔋"
+    status_full = "⚡"
+    status_unk = "❓"
+    low_threshold = 20
+    threshold_type = percentage
+    integer_battery_capacity = true
+}
+
 tztime local {
         format = "🕒 %a %d/%m/%Y  %H:%M:%S  "
 }
+
+
