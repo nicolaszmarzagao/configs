@@ -1,0 +1,59 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = " $directory$git_branch$git_status$nodejs$bun$rust$golang$php$time$character"
+
+[directory]
+style = "#a0a9cb"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 Documents"
+"Downloads" = " Downloads"
+"Music" = " Music"
+"Pictures" = " Pictures"
+
+[git_branch]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "#a0a9cb"
+format = "[($all_status$ahead_behind )]($style)"
+
+[nodejs]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol ($version) ]($style)"
+
+[bun]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol ($version) ]($style)"
+
+[php]
+symbol = ""
+style = "#a0a9cb"
+format = "[ $symbol ($version) ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "#a0a9cb"
+format = "[  $time ]($style)"
+
+[character]
+success_symbol = "[❯](#a0a9cb)"
+error_symbol = "[❯](#f7768e)"
